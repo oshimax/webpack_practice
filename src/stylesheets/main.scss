@@ -1,0 +1,35 @@
+@import './footter.scss';
+
+@mixin set-margin($direction, $value) {
+    margin-#{$direction}: $value;
+}
+
+body {
+    color: lightblue;
+    background-color: #f5f5f5;
+}
+
+$primary-color: #333;
+
+.content {
+    .title {
+        tab-size: 24px;
+        color: $primary-color;
+        font-weight: bold;
+    }
+    .title-lg {
+        @extend .title;
+        font-size: 32px;
+    }
+    @include set-margin(right, 16px);
+}
+
+body {
+    background-color: $primary-color;
+}
+
+h2 {
+    border-bottom: $primary-color;
+}
+
+

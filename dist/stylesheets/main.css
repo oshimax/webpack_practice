@@ -1,5 +1,22 @@
+.footer {
+  background-color: #eee; }
+
 body {
-    color: lightblue;
-    background-color: #eee;
-}
+  color: lightblue;
+  background-color: #f5f5f5; }
+
+.content {
+  margin-right: 16px; }
+  .content .title, .content .title-lg {
+    tab-size: 24px;
+    color: #333;
+    font-weight: bold; }
+  .content .title-lg {
+    font-size: 32px; }
+
+body {
+  background-color: #333; }
+
+h2 {
+  border-bottom: #333; }
 
