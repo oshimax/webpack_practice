@@ -47,6 +47,17 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('autoprefixer'),
+                ],
+              },
             },
           },
           {
@@ -99,14 +110,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/index.pug',
       filename: 'index.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/access.pug',
-      filename: 'access.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/members/taro.pug',
-      filename: 'members/taro.html',
     }),
     new CleanWebpackPlugin(),
   ],
